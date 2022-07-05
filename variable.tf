@@ -48,6 +48,5 @@ variable "LogsRetentionInDays"{
 }
 
 variable "OperatorEmail" {
-	 default = "karthic_2010@yahoo.co.in"
-	
+	 default = "karthic_2010@yahoo.co.in"	
 }
