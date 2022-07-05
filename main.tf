@@ -21,3 +21,11 @@ module "account-standardizations"{
   RequireUppercaseCharacters = var.RequireUppercaseCharacters
   LogsRetentionInDays = var.LogsRetentionInDays
 }
+
+  module "log-management" {
+    source = "./modules/log-management"
+    OperatorEmail = var.OperatorEmail
+
+  }
+    
+    
