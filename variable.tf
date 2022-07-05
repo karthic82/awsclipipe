@@ -46,3 +46,8 @@ variable "RequireUppercaseCharacters"{
 variable "LogsRetentionInDays"{
 	default = "14"
 }
+
+variable "OperatorEmail" {
+	 default = "karthic_2010@yahoo.co.in"
+	
+}
