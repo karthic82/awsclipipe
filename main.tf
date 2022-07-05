@@ -25,7 +25,6 @@ module "account-standardizations"{
   module "log-management" {
     source = "./modules/log-management"
     OperatorEmail = var.OperatorEmail
-
-  }
+}
     
     
