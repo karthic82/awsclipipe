@@ -11,7 +11,7 @@ resource "aws_s3_bucket" "hitech_buck" {
 resource "aws_s3_bucket_object" "object" {
   bucket = aws_s3_bucket.hitech_buck.id
   key    = "account_std.yml"
-  source = "/var/lib/jenkins/workspace/Jenkins-Terrafrom-CFT-pipeline/modules/account-standardizations/CFT/account_std.yml"
+  source = "/var/lib/jenkins/workspace/Karthic_Jenkins_Pipeline/modules/account-standardizations/CFT/account_std.yml"
 
 }
 
