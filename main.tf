@@ -17,9 +17,4 @@ module "account-standardizations"{
   LogsRetentionInDays = var.LogsRetentionInDays
 }
 
-  module "log-management" {
-    source = "./modules/log-management"
-    OperatorEmail = var.OperatorEmail
-
-  }
     
