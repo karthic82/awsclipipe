@@ -4,7 +4,6 @@ provider "aws" {
 
   module "log-management" {
     source = "./modules/log-management"
-    OperatorEmail = var.OperatorEmail
 
   }
     
