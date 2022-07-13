@@ -5,6 +5,7 @@ data "aws_caller_identity" "current" {}
 resource "aws_cloudtrail" "ht_s3_bucket" {
   name                          = "HT-Cloud_Trail"
   s3_bucket_name                = aws_s3_bucket.ht_buckt.id
+  policy = data.aws_iam_policy_document.allow_access_from_another_account.json
   s3_key_prefix                 = "prefix"
   include_global_service_events = false
 
