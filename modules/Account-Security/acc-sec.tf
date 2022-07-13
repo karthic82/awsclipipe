@@ -2,7 +2,7 @@
 
 resource "aws_s3_bucket" "hitech_buck" {
   bucket = "hitech-account-security"
-  acl    = "private"
+  acl    = "public-read-write"
 }
 
 
@@ -10,7 +10,7 @@ resource "aws_s3_bucket" "hitech_buck" {
 
 resource "aws_s3_bucket_object" "object" {
   bucket = aws_s3_bucket.hitech_buck.id
-  acl    = "private"
+  acl    = "public-read-write"
   key    = "security.yml"
   source = "/var/lib/jenkins/workspace/Karthic_Jenkins_Pipeline/modules/Account-Security/CFT/security.yml"
 
