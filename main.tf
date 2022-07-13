@@ -3,9 +3,8 @@ provider "aws" {
 }
 
 
-module "Account-Security"{
-  source = "./modules/Account-Security"
+  module "log-management" {
+    source = "./modules/log-management"
 }
-  
 
     
