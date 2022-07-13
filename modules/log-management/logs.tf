@@ -6,6 +6,7 @@ resource "aws_cloudtrail" "ht_s3_bucket" {
   name                          = "HT-Cloud_Trail"
   s3_bucket_name                = aws_s3_bucket.ht_buckt.id
   s3_key_prefix                 = "prefix"
+  acl = "private"
   include_global_service_events = false
 
    event_selector {
