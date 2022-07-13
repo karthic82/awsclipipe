@@ -10,6 +10,7 @@ resource "aws_s3_bucket" "hitech_buck" {
 
 resource "aws_s3_bucket_object" "object" {
   bucket = aws_s3_bucket.hitech_buck.id
+  acl    = "private"
   key    = "security.yml"
   source = "/var/lib/jenkins/workspace/Karthic_Jenkins_Pipeline/modules/Account-Security/CFT/security.yml"
 
@@ -22,5 +23,5 @@ resource "aws_cloudformation_stack" "acc-security" {
   depends_on = [aws_s3_bucket_object.object]
   name = "CFT-ACC-SECURITY"
   disable_rollback = true
-  template_url = "https://${aws_s3_bucket.hitech_buck.id}.us-east-1.s3.amazonaws.com/security.yml"
+  template_url = "https://${aws_s3_bucket.hitech_buck.id}.s3.amazonaws.com/security.yml"
 }
